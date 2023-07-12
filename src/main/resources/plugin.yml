@@ -1,0 +1,4 @@
+name: EnemyDown
+version: '${version}'
+main: org.example.plugin.enemydown.EnemyDown
+api-version: '1.20'
