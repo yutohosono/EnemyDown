@@ -1,17 +1,17 @@
 package org.example.plugin.enemydown;
 
+import org.bukkit.Bukkit;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.example.plugin.enemydown.command.EnemyDownCommand;
 
-public final class EnemyDown extends JavaPlugin {
+public final class EnemyDown extends JavaPlugin implements Listener {
 
     @Override
     public void onEnable() {
         // Plugin startup logic
 
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+        Bukkit.getPluginManager().registerEvents(this, this);
+        getCommand("enemyDown").setExecutor(new EnemyDownCommand());
     }
 }
